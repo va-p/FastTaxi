@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "482539287873",
+    "project_id": "apoio-delivery-jf",
+    "storage_bucket": "apoio-delivery-jf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482539287873:android:eae7e238782e9162f95dc0",
+        "android_client_info": {
+          "package_name": "com.vap.ApoioDelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482539287873-brk3u7453amc2mn15iucg53ie74n931h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vap.ApoioDelivery",
+            "certificate_hash": "46ff4af7a0f5cac2d21d4c2fe8ce716ed74a1045"
+          }
+        },
+        {
+          "client_id": "482539287873-rdn5p41rvf91dsjhubemoaio2o4h56n8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmzYbI0yP6WGz5RDLLdYPsid50wW1VJew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482539287873-rdn5p41rvf91dsjhubemoaio2o4h56n8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
