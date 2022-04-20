@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  View,
-  SafeAreaView
-} from 'react-native';
+  Container,
+  AddressContainer
+} from './styles'
 
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,16 +13,13 @@ import { selectDestination, setDestination } from '../../slices/navigationSlice'
 
 import { GOOGLE_MAPS_API_KEY_ANDROID } from '@env';
 
-import { theme } from '../../global/styles/theme';
-import { styles } from './styles';
-
 export function DestinationAddressCard({ navigation }) {
   const dispatch = useDispatch();
   const destination = useSelector(selectDestination);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.addressContainer}>
+    <Container>
+      <AddressContainer>
         <GooglePlacesAutocomplete
           placeholder='Endereço de destino'
           minLength={2}
@@ -48,27 +45,25 @@ export function DestinationAddressCard({ navigation }) {
           styles={{
             container: {
               flex: 0,
-
               borderRadius: 15
             },
             textInput: {
               fontSize: 16,
-
-              backgroundColor: theme.colors.input_text,
-              color: theme.colors.text_dark,
+              backgroundColor: '#D5DDE0',
+              color: '#353839',
               borderRadius: 15
             },
             listView: {
               borderRadius: 15
             },
             row: {
-              backgroundColor: theme.colors.input_text,
-              color: theme.colors.text
+              backgroundColor: '#D5DDE0',
+              color: '#8F8F8F'
             }
           }}
         />
         <NavFavorites navigation />
-      </View>
-    </SafeAreaView>
+      </AddressContainer>
+    </Container>
   );
 }

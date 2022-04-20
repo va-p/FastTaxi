@@ -3,13 +3,13 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons'
 
-import { CustomDrawer } from '../components/CustomDrawer';
+import { CustomDrawer } from '@components/CustomDrawer';
 
-import { CustomerOrders } from '../screens/CustomerOrders';
-import { UserProfile } from '../screens/UserProfile';
-import { MapRide } from '../screens/MapRide';
-import { Support } from '../screens/Support';
-import { Home } from '../screens/Home';
+import { CustomerOrders } from '@screens/CustomerOrders';
+import { UserProfile } from '@screens/UserProfile';
+import { MapRide } from '@screens/MapRide';
+import { Support } from '@screens/Support';
+import { Home } from '@screens/Home';
 
 const Drawer = createDrawerNavigator();
 

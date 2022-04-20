@@ -50,7 +50,7 @@ function AuthProvider({ children }: AuthProviderProps) {
           isAdmin: data.user.is_admin,
         }
         setUser(userData);
-        console.log(userData)
+        console.log(user)
       }
     } catch (error: any) {
       console.log(error);

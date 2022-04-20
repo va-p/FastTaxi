@@ -1,16 +1,12 @@
-import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
+
 import { RFValue } from 'react-native-responsive-fontsize';
 
-export const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  addressDestination: {
-    height: '35%',
-    justifyContent: 'center',
-    paddingVertical: '1%'
-  },
-  title: {
-    fontSize: RFValue(16)
-  }
-});
+export const Container = styled.KeyboardAvoidingView`
+  flex: 1;
+`;
+export const AddressDestinationContainer = styled.View`
+`;
+export const Title = styled.Text`
+  font-size: ${RFValue(16)}px;
+`;

@@ -5,8 +5,8 @@ import {
   Title
 } from './styles';
 
-import { CustomerOrderListItem, CustomerOrderListItemProps } from '../../components/CustomerOrderListItem';
-import { Load } from '../../components/Load';
+import { CustomerOrderListItem, CustomerOrderListItemProps } from '@components/CustomerOrderListItem';
+import { Load } from '@components/Load';
 
 import { useAuth } from '../../contexts/auth';
 import api from '../../api/api';

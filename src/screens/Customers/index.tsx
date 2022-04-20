@@ -5,8 +5,8 @@ import {
   Title
 } from './styles';
 
-import { CustomerListItem, CustomerListItemProps } from '../../components/CustomerListItem';
-import { Load } from '../../components/Load';
+import { CustomerListItem, CustomerListItemProps } from '@components/CustomerListItem';
+import { Load } from '@components/Load';
 
 import api from '../../api/api';
 

@@ -1,14 +1,13 @@
 import React from 'react';
 import {
-  View
-} from 'react-native';
+  Container
+} from './styles';
 
-import { styles } from './styles';
 
 export function ResetPass() {
   return (
-    <View style={styles.container}>
+    <Container>
 
-    </View>
+    </Container>
   );
 }

@@ -9,8 +9,6 @@ import {
   Text
 } from './styles';
 
-import Unorderedlist from 'react-native-unordered-list';
-
 export function PrivacyPolicy() {
   return (
     <Container>

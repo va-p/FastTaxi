@@ -14,8 +14,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 
-import { InputForm } from '../../components/Form/InputForm';
-import { Button } from '../../components/Button';
+import { InputForm } from '@components/Form/InputForm';
+import { Button } from '@components/Button';
 
 import api from '../../api/api';
 
@@ -56,7 +56,7 @@ export function SignUp({ navigation }) {
       const response = await api.post('auth/signup', newUser);
       console.log(response);
 
-      Alert.alert('Bem vindo à Fast Taxi! Você será redirecionado para a tela de login.', '', [{ text: 'OK', onPress: () => navigation.navigate('Login') }]);
+      Alert.alert('Bem vindo à Fast Taxi! Você será redirecionado para a tela de login.', '', [{ text: 'OK', onPress: () => navigation.navigate('SignIn') }]);
 
     } catch (error) {
       console.log(error);

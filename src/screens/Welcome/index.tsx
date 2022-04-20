@@ -5,7 +5,7 @@ import {
   Text
 } from './styles';
 
-import { Button } from '../../components/Button';
+import { Button } from '@components/Button';
 
 export function Welcome({ navigation }) {
   return (

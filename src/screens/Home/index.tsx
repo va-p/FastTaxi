@@ -1,35 +1,34 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import {
-  View,
-  Platform,
-  KeyboardAvoidingView
-} from 'react-native';
+  Container,
+  AddressContainer
+} from './styles';
 
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import { NavFavorites } from '../../components/NavFavorites';
 import { useDispatch, useSelector } from 'react-redux';
-import { Map } from '../../components/Map';
+
+import { NavFavorites } from '@components/NavFavorites';
+import { Map } from '@components/Map';
 
 import { GOOGLE_MAPS_API_KEY_ANDROID } from '@env';
 
 import { setOrigin, selectOrigin, setDestination } from '../../slices/navigationSlice';
-
-import { styles } from './styles';
 
 export function Home({ navigation }) {
   const dispatch = useDispatch();
   const origin = useSelector(selectOrigin);
 
   return (
-    <KeyboardAvoidingView
+    <Container
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}>
+    >
 
       <Map />
 
-      <View style={styles.addressContainer}>
+      <AddressContainer>
         <GooglePlacesAutocomplete
-          placeholder='Onde será a retirada?'
+          placeholder='Para onde?'
           minLength={2}
           debounce={400}
           enablePoweredByContainer={false}
@@ -75,7 +74,7 @@ export function Home({ navigation }) {
           }}
         />
         <NavFavorites navigation />
-      </View>
-    </KeyboardAvoidingView >
+      </AddressContainer>
+    </Container>
   );
 }

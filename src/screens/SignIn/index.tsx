@@ -5,16 +5,15 @@ import {
   ContainerTextSign,
   Form,
   LinkSignin,
-  TextSignin,
-
+  TextSignin
 } from './styles';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 
-import { InputForm } from '../../components/Form/InputForm';
-import { Button } from '../../components/Button';
+import { InputForm } from '@components/Form/InputForm';
+import { Button } from '@components/Button';
 
 import { useAuth } from '../../contexts/auth';
 
@@ -25,8 +24,8 @@ interface FormData {
 
 /* Validation Form - Start */
 const schema = Yup.object().shape({
-  email: Yup.string().required('Informe o seu e-mail'),
-  password: Yup.string().required('Informe a sua senha')
+  email: Yup.string().required('Digite o seu e-mail'),
+  password: Yup.string().required('Digite a sua senha')
 });
 /* Validation Form - End */
 
@@ -47,9 +46,10 @@ export function SignIn({ navigation }) {
       } else {
         navigation.navigate('Home')
       }
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       Alert.alert('Credenciais Inválidas.');
+      //throw new Error(error);
     }
   };
 

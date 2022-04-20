@@ -1,17 +1,17 @@
 import React from 'react';
 import {
-  View
-} from 'react-native';
-import { UserProfileHeader } from '../../components/UserProfileHeader';
+  Container
+} from './styles';
 
-import { styles } from './styles';
+import { UserProfileHeader } from '@components/UserProfileHeader';
+
 
 export function UserProfile() {
   return (
-    <View style={styles.container}>
+    <Container>
 
       <UserProfileHeader />
 
-    </View>
+    </Container>
   );
 }

@@ -4,7 +4,7 @@ import {
   Form
 } from './styles';
 
-import { Button } from '../../components/Button';
+import { Button } from '@components/Button';
 
 export function HomeAdmin({ navigation }) {
 
@@ -18,7 +18,7 @@ export function HomeAdmin({ navigation }) {
         />
 
         <Button
-          title='Histórico de Pedidos '
+          title='Histórico de Pedidos'
           onPress={() => navigation.navigate('Histórico de Pedidos')}
         />
 

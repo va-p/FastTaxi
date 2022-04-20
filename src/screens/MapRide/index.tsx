@@ -1,26 +1,25 @@
 import React from 'react';
 import {
-  View,
-  KeyboardAvoidingView,
   Platform
 } from 'react-native';
+import {
+  AddressDestinationContainer,
+  Container,
+} from './styles';
 
-import { MapScreenNavigation } from '../../components/MapScreenNavigation';
-import { Map } from '../../components/Map';
-
-import { styles } from './styles';
+import { MapScreenNavigation } from '@components/MapScreenNavigation';
+import { Map } from '@components/Map';
 
 export function MapRide() {
 
   return (
-    <KeyboardAvoidingView
+    <Container
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}
     >
       <Map />
-      <View style={styles.addressDestination}>
+      <AddressDestinationContainer>
         <MapScreenNavigation />
-      </View>
-    </KeyboardAvoidingView>
+      </AddressDestinationContainer>
+    </Container>
   );
 }
